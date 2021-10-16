@@ -6,8 +6,10 @@ A simple speech recognition bot that can repeat back to you using Apple's built 
 
 Be sure to have [Python3](https://www.python.org/downloads/), [pip](https://pip.pypa.io/en/stable/installation/), and [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html) installed. 
 
-## Create a virtualenv
+## Create a virtualenv and activate it
 `virtualenv venv --python=$(which python)`
+
+`source venv/bin/activate`
 
 ## Install packages
 `pip install -r brain/requirements.txt`
