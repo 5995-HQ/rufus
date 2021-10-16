@@ -31,4 +31,9 @@ def recordAudio():
     os.system(f'say "{data}"')
     return data
 
-recordAudio()
+data = recordAudio()
+while data != "exit":
+    if "what is" in data:
+        print("Searching...")
+        data = data.replace("what is", "")
+        
