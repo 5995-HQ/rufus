@@ -28,7 +28,16 @@ def recordAudio():
         print("Google Speech Recognition could not understand audio")
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
-    os.system(f'say "{data}"')
+    # os.system(f'say "{data}"')
     return data
 
-recordAudio()
+words = recordAudio()
+words
+if "hey Rufus open a Google search for" in words:
+    print(words)
+    words = words.replace("hey Rufus open a Google search for", "")
+    endwords = words.strip().replace(" ","+")
+    os.system(f'say -v Daniel "searching for {words.strip()}"')
+    webbrowser.open(f"https://www.google.com/search?q={endwords}")
+else:
+    os.system(f'say -v Daniel "{words}"')
