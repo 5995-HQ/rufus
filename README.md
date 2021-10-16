@@ -30,5 +30,8 @@ error: command 'cc' failed with exit status 1
 
 Try this to work around it. (Note you'll need [homebrew](https://brew.sh) installed for this to work)
 
-`brew install portaudio`
-`pip install --global-option='build_ext' --global-option='-I/usr/local/include' --global-option='-L/usr/local/lib' pyaudio`
+```
+brew install portaudio
+
+pip install --global-option='build_ext' --global-option='-I/usr/local/include' --global-option='-L/usr/local/lib' pyaudio
+```
