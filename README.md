@@ -14,6 +14,7 @@ Be sure to have [Python3](https://www.python.org/downloads/), [pip](https://pip.
 
 ## Run the script
 `python brain/rufus.py`
+
 Start talking! Watch it ___say___ and print what you just said!
 
 It's ___that___ easy. 
