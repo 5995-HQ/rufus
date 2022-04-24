@@ -39,3 +39,19 @@ brew install portaudio
 
 pip install --global-option='build_ext' --global-option='-I/usr/local/include' --global-option='-L/usr/local/lib' pyaudio
 ```
+
+## Still broken?
+
+You probably have `homebrew`'s path in `/opt/` instead. In that case:
+
+```
+pip install --global-option='build_ext' --global-option='-I/opt/homebrew/Cellar/portaudio/19.7.0/include' --global-option='-L/opt/homebrew/Cellar/portaudio/19.7.0/lib' pyaudio
+```
+If you got this error:
+```
+raise OSError("FLAC conversion utility not available - consider installing the FLAC command line application by running `apt-get install flac` or your operating system's equivalent")
+OSError: FLAC conversion utility not available - consider installing the FLAC command line application by running `apt-get install flac` or your operating system's equivalent
+```
+Run this:
+`brew install flac` 
+
